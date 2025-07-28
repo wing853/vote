@@ -27,13 +27,24 @@ header p {
 /* 영상 카드 그리드 */
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* 3개 칸 고정 */
   gap: 1.5rem;
   padding: 2rem 1.5rem;
   max-width: 1400px;
   margin: 0 auto;
-  justify-content: start; /* 기본은 왼쪽 정렬 */
+  justify-content: start;
+  box-sizing: border-box;
 }
+div {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem; /* h2와 p 사이 간격 조절 */
+}
+
+div h2, div p {
+  margin: 0;
+}
+
 
 /* 개별 카드 */
 .video-card {

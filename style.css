@@ -110,11 +110,17 @@ footer {
     font-size: 1.2rem;
   }
 
-  .video-grid {
-    grid-template-columns: 1fr;
-    justify-content: center;  /* ✅ 모바일에서는 중앙 정렬 */
-    padding: 1rem;
-  }
+ .video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-content: start;
+  box-sizing: border-box; /* 이걸 꼭 추가 */
+}
+
 
   .vote-btn {
     font-size: 1.1rem;
